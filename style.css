@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+}
+h1, h2 {
+    text-align: center;
+    margin: 20px;
+}
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 60vh;
+
+}
+#palindrome-container, #definition-container {
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: rgb(158, 252, 221);
+    border-radius: 10px;
+}
+#palindrome-container {
+    min-height: 200px;
+    display: grid;
+    grid-template:
+                "label label label" auto
+                "input input button" 30px
+                "result result result" auto / 1fr 1fr 60px;    
+}
+#lab {
+    grid-area: label;
+}
+#text-input {
+    grid-area: input;
+    max-width: 200px;
+    
+}
+#check-btn {
+    grid-area: button;
+
+    
+}
+#result-p {
+    grid-area: result;
+    align-self: flex-end;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 40vw;
+}
