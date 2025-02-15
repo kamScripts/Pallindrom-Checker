@@ -34,10 +34,11 @@ h1, h2 {
     grid-template:
                 "label label label" auto
                 "input input button" 30px
-                "result result result" auto / 1fr 1fr 60px;    
+                "result result result" auto/ 1fr 1fr 60px;    
 }
 #lab {
     grid-area: label;
+
 }
 #text-input {
     grid-area: input;
