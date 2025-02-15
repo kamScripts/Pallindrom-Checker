@@ -22,7 +22,7 @@ h1, h2 {
 
 }
 #palindrome-container, #definition-container {
-    max-width: 400px;
+    width: 400px;
     padding: 20px;
     border: 2px solid black;
     background-color: rgb(158, 252, 221);
@@ -31,26 +31,32 @@ h1, h2 {
 #palindrome-container {
     min-height: 200px;
     display: grid;
+    gap: .5rem;
     grid-template:
-                "label label label" auto
-                "input input button" 30px
-                "result result result" auto/ 1fr 1fr 60px;    
+                "label label " auto
+                "input  button" 30px
+                "result result" auto/ 2fr 1fr;    
 }
 #lab {
     grid-area: label;
+    justify-self: center;
+    align-self:flex-end;
+    padding-bottom: 1rem;
 
 }
 #text-input {
     grid-area: input;
-    max-width: 200px;
+
     
 }
 #check-btn {
     grid-area: button;
+    background-color: rgb(3, 61, 3);
+    color: rgb(250, 225, 192);
 
     
 }
-#result-p {
+#paraResult {
     grid-area: result;
     align-self: flex-end;
 }
