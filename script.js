@@ -7,6 +7,7 @@ let = isPalindrome = false;
 function getUserInput() {
     const rawValue = textInput.value;
     const value = cleanInput(rawValue.toLowerCase());
+
     if (value==="") {
         alert("Please input a value");        
     } else {
@@ -23,18 +24,14 @@ function cleanInput(str) {
     return str.replace(regex, '');
 }
 function palindromeCheck(value) {
-    // use spread to create array, and reverse.
-    const arr = value.split("")
-    const reverseArr = [...arr].reverse();
-    const reversedString = reverseArr.join('');
-
+    const reversedString = value.split("").reverse().join('');
     value===reversedString ? isPalindrome = true : isPalindrome = false;
 
     
 }
 function printResults(str) {
-
     const isOrNot = isPalindrome ? 'is' : 'is not';
+    
     resultSpan.innerText = `${str} ${isOrNot} a palindrome`;
     resultSpan.style.backgroundColor = 'rgb(250, 225, 192)';
     resultSpan.style.padding = '0 20px 0 20px';
